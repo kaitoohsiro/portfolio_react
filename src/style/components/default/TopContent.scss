@@ -1,0 +1,42 @@
+// TopContent.scss
+
+$main-color: #f1efe9;
+$svg-width: 80%;
+
+.top-container {
+    background-color: $main-color;
+    height: 790px;
+    margin-top: 24px;
+
+    .grid-container {
+        height: 100%;
+
+        .svg-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: $svg-width;
+            height: auto;
+        }
+        }
+
+        .text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .title {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #555;
+        }
+        }
+    }
+}

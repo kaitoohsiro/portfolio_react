@@ -1,0 +1,72 @@
+// Header.scss
+$header-background-color: rgba(255, 255, 255, 0);
+$header-background-color-scrolled: #ffffff;
+$header-border-bottom: #e5e5e5;
+$header-padding: 3em;
+$header-height: 70px;
+$header-link-color: #000;
+$header-font-family: Georgia, serif;
+
+header {
+    font-family: $header-font-family;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $header-padding;
+    height: $header-height;
+    background-color: $header-background-color;
+    border-bottom: 0px solid $header-border-bottom;
+    transition: all 0.5s 0s ease;
+    z-index: 1000;
+
+    &.scrolled {
+        background-color: $header-background-color-scrolled; // 追加: スクロール時の背景色
+        border-bottom: 1px solid $header-border-bottom;
+    }
+
+    .left {
+        text-align: center;
+        width: 154px;
+        color: $header-link-color;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .right {
+        text-align: right;
+    }
+
+    .header_title {
+        text-decoration: none;
+        color: $header-link-color;
+        margin: 0 15px;
+        padding: 10px 10px;
+    }
+
+    .menu_default {
+        margin: 0 15px;
+        padding: 10px 10px;
+        text-decoration: none;
+        color: $header-link-color;
+    }
+
+    .menu {
+        border-radius: 30px;
+    }
+
+    .menu:hover {
+        background-color: #ececec;
+    }
+
+    .scrolled_menu {
+        border: 0px solid transparent; /* ボーダーの初期スタイル */
+        transition: all 0.5s 0s ease; /* ボーダーのトランジションを0.5秒に設定 */
+        &:hover {
+            border-bottom: 1px solid #000;
+        }
+    }
+}
