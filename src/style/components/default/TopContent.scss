@@ -4,7 +4,12 @@ $main-color: #f1efe9;
 $svg-width: 80%;
 
 .top-container {
-    background-color: $main-color;
+    // background-color: $main-color;
+    background: #f89174;/*保険用*/
+    background: -moz-linear-gradient(top, #FFC778 0%,#f89174 100%);/*古いFireFox向け*/
+    background: -webkit-linear-gradient(top, #FFC778 0%,#f89174 100%);/*古いSafari・Chrome向け*/
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbcacb', endColorstr='#f79697',GradientType=0 );/*IE9以下への対応*/
+    background: linear-gradient(to bottom, #FFC778 0%, #f89174 100%);/*正規のプロパティ*/
     height: 790px;
     margin-top: 24px;
 

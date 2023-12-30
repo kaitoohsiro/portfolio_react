@@ -1,0 +1,91 @@
+// .block {
+//     text-align: center;
+//     .container {
+//         display: flex;
+//         width: 100%;
+//         margin: 30px 0;
+//         align-items: center;
+//         justify-content: center;
+//         .content {
+//             display: flex;
+//             margin: 0 20px;
+//             .imgBlock {
+//                 .imgStyle {
+//                     width: 80%;
+//                     height: auto;
+//                     border-radius: 10px;
+//                 }
+//             }
+//             .textBlock {
+//                 width: 60%;
+//             }
+//         }
+//     }
+// }
+.container {
+  margin-top: 80px;
+  width: 50%; // Adjust as needed to leave some space between items
+  // margin-bottom: 20px; // Adjust margin as needed
+  .content {
+    display: flex;
+    align-items: center;
+    .imgBlock {
+      .imgStyle {
+        width: 320px;
+        height: 250px;
+      }
+    }
+    .textBlock {
+      width: 330px;
+      padding: 30px;
+      .subTitle {
+        font-weight: bold;
+        font-size: 20px;
+      }
+      .title {
+        font-size: 36px;
+      }
+      .purple {
+        color: #7000FF;
+      }
+      .orange {
+        color: #FF8A00;
+      }
+      .egreen {
+        color: #00B027;
+      }
+      .green {
+        color: #2C8602;
+      }
+      .blue {
+        color: #1601FF;
+      }
+      .text {
+        font-weight: 300;
+        font-size: 16px;
+      }
+      .btn {
+        border-radius: 30px;
+        padding: 10px;
+        text-align: center;
+        margin: 10px 0;
+        width: 200px;
+      }
+      .purple-btn {
+        border: 1px solid #7000FF;
+      }
+      .orange-btn {
+        border: 1px solid #FF8A00;
+      }
+      .egreen-btn {
+        border: 1px solid #00B027;
+      }
+      .green-btn {
+        border: 1px solid #2C8602;
+      }
+      .blue-btn {
+        border: 1px solid #1601FF;
+      }
+    }
+  }
+}

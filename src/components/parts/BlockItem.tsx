@@ -1,40 +1,29 @@
-import { Grid } from "@mui/material";
-import kaihatu from "../../assets/kaihatu.png";
-import deep from "../../assets/deep.png";
+import "../../style/components/parts/BlockItem.scss";
 
-const BlockItem = () => {
-    const block: { [key: string]: string } = {
-        textAlign: "center"
-    }
-    const blockItemStyle: { [key: string]: string } = {
-        // backgroundColor: "#000000",
-        height: "400px",
-
-        padding: "60px 0px 0px 0px"
-    }
-    const imgStyle: { [key: string]: string } = {
-        width: "70%", // Adjust the size as needed
-        height: "auto",
-        borderRadius: "10px",
-      };
-    return (
-        <div style={block}>
-            <Grid container spacing={3} >
-                <Grid item xs={12} md={6} style={blockItemStyle}>
-                    <img
-                        src={deep}
-                        style={imgStyle}
-                    />
-                </Grid>
-                <Grid item xs={12} md={6} style={blockItemStyle}>
-                    <img
-                        src={kaihatu}
-                        style={imgStyle}
-                    />
-                </Grid>
-            </Grid>
-        </div>
-    )
+interface BlockItemProps {
+  imageUrl: string;
+  color: string;
+  subtitle: string;
+  title: string;
+  text: string;
 }
+
+const BlockItem = (props: BlockItemProps) => {
+  return (
+      <div className="container">
+        <div className="content">
+          <div className="imgBlock">
+            <img src={props.imageUrl} className="imgStyle" alt="Block Item" />
+          </div>
+          <div className="textBlock">
+            <p className="subTitle">{props.subtitle}</p>
+            <h3 className={`title ${props.color}`}>{props.title}</h3>
+            <p className="text">{props.text}</p>
+            <div className={`btn ${props.color}-btn`}>more</div>
+          </div>
+        </div>
+      </div>
+  );
+};
 
 export default BlockItem;

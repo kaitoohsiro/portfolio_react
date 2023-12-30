@@ -12,7 +12,7 @@ const TopContent = () => {
         </Grid>
         <Grid item xs={12} md={6} className="text-container">
           <Typography variant="h4" className="title">
-            Kai.
+            KAIX
           </Typography>
           <Typography variant="subtitle1" className="subtitle">
             Your Catchy Slogan or Description

@@ -1,8 +1,6 @@
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react";
-
-const MenuTitle = (props: { menuTitle: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }) => {
+const MenuTitle = (props: { menuTitle: string }) => {
     return (
-        <div style={menuStyle}>
+        <div id={props.menuTitle} style={menuStyle}>
             <div style={barStyle}></div>
             <div style={titleStyle}>{props.menuTitle}</div>
         </div>

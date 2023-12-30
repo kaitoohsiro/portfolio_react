@@ -1,6 +1,12 @@
-$content-background-color: #E2DED1;
+$content-background-color: #ffffff;
 
 .content-style {
     padding: 60px 5%;
     background-color: $content-background-color;
+    .image-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; // Adjust as needed
+         // Adjust margin as needed
+    }
 }

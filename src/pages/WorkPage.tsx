@@ -1,17 +1,16 @@
 import { Footer, Header } from '../components/default';
-import {BlockItem} from '../components/parts/';
 
 
 
 const WorkPage = () => {
     return (
         <>
-            <Header />
+            <Header scrolled={true} />
             <div style={WorkPageStyle}>
                 <h2>Works</h2>
             </div>
-            <BlockItem />
-            <BlockItem />
+            {/* <BlockItem />
+            <BlockItem /> */}
             <Footer />
         </>
     )
