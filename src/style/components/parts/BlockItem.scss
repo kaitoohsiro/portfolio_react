@@ -1,49 +1,99 @@
-// .block {
-//     text-align: center;
-//     .container {
-//         display: flex;
-//         width: 100%;
-//         margin: 30px 0;
-//         align-items: center;
-//         justify-content: center;
-//         .content {
-//             display: flex;
-//             margin: 0 20px;
-//             .imgBlock {
-//                 .imgStyle {
-//                     width: 80%;
-//                     height: auto;
-//                     border-radius: 10px;
-//                 }
-//             }
-//             .textBlock {
-//                 width: 60%;
-//             }
-//         }
-//     }
-// }
+$breakpoints: (
+  'smd': 'screen and (max-width: 576px)',
+  'sm': 'screen and (min-width: 576px)',
+  'md': 'screen and (min-width: 768px)',
+  'lg': 'screen and (min-width: 992px)',
+  'xl': 'screen and (min-width: 1100px)',
+  'pc1': 'screen and (min-width: 1250px)'
+) !default;
+
+@mixin media($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
 .container {
   margin-top: 80px;
   width: 50%; // Adjust as needed to leave some space between items
   // margin-bottom: 20px; // Adjust margin as needed
+  @include media(smd) {
+    width: 100%;
+  }
+  @include media(sm) {
+    width: 100%;
+  }
+  @include media(lg) {
+    width: 50%;
+  }
   .content {
     display: flex;
     align-items: center;
     .imgBlock {
       .imgStyle {
-        width: 320px;
-        height: 250px;
+        @include media(smd) {
+          width: 200px;
+          height: 150px;
+        }
+        @include media(sm) {
+          width: 400px;
+          height: 320px;
+        }
+        @include media(lg) {
+          width: 170px;
+          height: 130px;
+        }
+        @include media(xl) {
+          width: 200px;
+          height: 156px;
+        }
+
+        @include media(pc1) {
+          width: 320px;
+          height: 250px;
+        }
+
       }
     }
     .textBlock {
       width: 330px;
       padding: 30px;
+      @include media(smd) {
+        width: 100%;
+      }
       .subTitle {
         font-weight: bold;
-        font-size: 20px;
+        @include media(smd) {
+          font-size: 16px;
+        }
+        @include media(sm) {
+          font-size: 32px;
+        }
+        @include media(lg) {
+          font-size: 16px;
+        }
+        @include media(xl) {
+        font-size: 18px;
+        }
+
+        @include media(pc1) {
+          font-size: 20px;
+        }
       }
       .title {
-        font-size: 36px;
+        @include media(sm) {
+          font-size: 32px;
+        }
+        @include media(lg) {
+          font-size: 28px;
+        }
+        @include media(xl) {
+        font-size: 32px;
+        }
+
+        @include media(pc1) {
+          font-size: 36px;
+        }
       }
       .purple {
         color: #7000FF;
@@ -63,6 +113,19 @@
       .text {
         font-weight: 300;
         font-size: 16px;
+        @include media(sm) {
+          font-size: 22px;
+        }
+        @include media(lg) {
+          font-size: 12px;
+        }
+        @include media(xl) {
+        font-size: 14px;
+        }
+
+        @include media(pc1) {
+          font-size: 16px;
+        }
       }
       .btn {
         border-radius: 30px;
@@ -70,6 +133,9 @@
         text-align: center;
         margin: 10px 0;
         width: 200px;
+        @include media(smd) {
+          width: 100%;
+        }
       }
       .purple-btn {
         border: 1px solid #7000FF;
@@ -88,4 +154,6 @@
       }
     }
   }
+
+
 }

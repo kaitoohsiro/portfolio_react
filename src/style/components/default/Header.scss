@@ -1,4 +1,19 @@
 // Header.scss
+$breakpoints: (
+    'smd': 'screen and (max-width: 576px)',
+    'sm': 'screen and (min-width: 576px)',
+    'md': 'screen and (min-width: 768px)',
+    'lg': 'screen and (min-width: 992px)',
+    'xl': 'screen and (min-width: 1100px)',
+    'pc1': 'screen and (min-width: 1250px)'
+) !default;
+
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
 $header-background-color: rgba(255, 255, 255, 0);
 $header-background-color-scrolled: #ffffff;
 $header-border-bottom: #e5e5e5;
@@ -21,6 +36,7 @@ header {
     transition: all 0.5s 0s ease;
     z-index: 1000;
 
+
     &.scrolled {
         background-color: $header-background-color-scrolled; // 追加: スクロール時の背景色
         border-bottom: 1px solid $header-border-bottom;
@@ -38,6 +54,15 @@ header {
 
     .right {
         text-align: right;
+        @include media(smd) {
+            display: none;
+        }
+        @include media(sm) {
+            display: none;
+        }
+        @include media(lg) {
+            display: block;
+        }
     }
 
     .header_title {

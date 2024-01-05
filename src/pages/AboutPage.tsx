@@ -3,8 +3,8 @@ import { Description, MenuTitle } from '../components/parts';
 import AboutBlok from '../components/parts/AboutBlock';
 import '../style/pages/AboutPage.scss'; // Sassファイルをインポート
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinux, faUbuntu, faAws, faPhp, faGithub, faPython, faGolang, faReact, faVuejs, faNode, faFigma, faDocker, faWindows,  } from "@fortawesome/free-brands-svg-icons";
-import { faN, faBrain, faRobot } from "@fortawesome/free-solid-svg-icons";
+import { faLinux, faUbuntu, faAws, faPhp, faGithub, faPython, faGolang, faReact, faVuejs, faNode, faFigma, faDocker, faWindows, faCentos, faApple, faWordpress, faStripe, faLaravel } from "@fortawesome/free-brands-svg-icons";
+import { faN, faBrain, faRobot, faC, faF, faDatabase } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -26,7 +26,16 @@ function AboutPage() {
     { name: 'Windows', icon: faWindows },
     { name: 'nginx', icon: faN },
     { name: 'AI', icon: faBrain },
-    { name: 'IOT', icon: faRobot }
+    { name: 'IOT', icon: faRobot },
+    { name: 'centos', icon: faCentos },
+    { name: 'maxOS', icon: faApple },
+    { name: 'wordpress', icon: faWordpress },
+    { name: 'stripe', icon: faStripe },
+    { name: 'C / C++', icon: faC },
+    { name: 'flutter', icon: faF },
+    { name: 'laravel', icon: faLaravel },
+    { name: 'SQL, NoSQL', icon: faDatabase },
+
   ];
 
   const chunkedSkillData = Array.from({ length: Math.ceil(skillData.length / 4) }, (_, index) =>
