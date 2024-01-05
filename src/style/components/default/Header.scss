@@ -35,6 +35,10 @@ header {
     border-bottom: 0px solid $header-border-bottom;
     transition: all 0.5s 0s ease;
     z-index: 1000;
+    @include media(smd) {
+        margin: 0px;
+        padding: 0px;
+    }
 
 
     &.scrolled {
@@ -70,6 +74,10 @@ header {
         color: $header-link-color;
         margin: 0 15px;
         padding: 10px 10px;
+        @include media(smd) {
+            margin: 0px;
+            padding: 0px;
+        }
     }
 
     .menu_default {

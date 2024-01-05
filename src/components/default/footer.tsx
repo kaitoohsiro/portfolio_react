@@ -5,13 +5,13 @@ const Footer = () => {
   return (
     <footer>
       <div className="nav-container">
-        <a href="#">WORK</a>
+        <a href="/#Work">WORK</a>
         <span className="separator"> | </span>
-        <a href="#">BLOG</a>
+        <a href="/#Blog">BLOG</a>
         <span className="separator"> | </span>
-        <a href="#">ABOUT</a>
+        <a href="/about">ABOUT</a>
         <span className="separator"> | </span>
-        <a href="#">CONTACT</a>
+        <a href="/#Contact">CONTACT</a>
       </div>
       <p className="copyright">&copy; 2023 Your Company</p>
     </footer>

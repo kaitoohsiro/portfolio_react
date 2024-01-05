@@ -1,0 +1,22 @@
+$breakpoints: (
+    'smd': 'screen and (max-width: 576px)',
+    'sm': 'screen and (min-width: 576px)',
+    'md': 'screen and (min-width: 768px)',
+    'lg': 'screen and (min-width: 992px)',
+    'xl': 'screen and (min-width: 1100px)',
+    'pc1': 'screen and (min-width: 1250px)'
+) !default;
+
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+.descriptionStyle {
+    margin: 0 0 0 60px;
+    color: gray;
+    @include media(smd) {
+        margin: 0 0 0 20px;
+    }
+};

@@ -1,0 +1,39 @@
+$breakpoints: (
+    'smd': 'screen and (max-width: 576px)',
+    'sm': 'screen and (min-width: 576px)',
+    'md': 'screen and (min-width: 768px)',
+    'lg': 'screen and (min-width: 992px)',
+    'xl': 'screen and (min-width: 1100px)',
+    'pc1': 'screen and (min-width: 1250px)'
+) !default;
+
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+.menuStyle {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+
+    @include media(smd) {
+        margin-left: 10px;
+    }
+
+
+    .barStyle {
+        background-color: red;
+        width: 3px;
+        height: 54px;
+        margin-right: 10px;
+    }
+
+    .titleStyle {
+        color: black;
+        font-weight: bold;
+        font-size: '40px';
+        margin-left: '10px';
+    }
+}
