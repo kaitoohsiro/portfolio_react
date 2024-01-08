@@ -33,7 +33,11 @@ $breakpoints: (
     .titleStyle {
         color: black;
         font-weight: bold;
-        font-size: '40px';
-        margin-left: '10px';
+        font-size: 40px;
+        margin-left: 10px;
+        @include media(smd) {
+            font-size: 25px;
+
+        }
     }
 }
